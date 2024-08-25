@@ -1,0 +1,44 @@
+
+.auth-buttons {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+  margin: 0  auto ;
+
+
+
+}
+
+.container  {
+    height: 300px; /* Espacio entre los botones */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    border: solid #e7e7e7;
+    padding: 10px;
+    cursor: pointer;
+    width: 300px; /* Ajusta el ancho de los botones */
+    border-radius: 5px;
+}
+
+.container button {
+  border-radius: 5px;
+  border: solid #e7e7e7;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+
+
+.auth-buttons button:hover {
+  background-color: #b4b4b4;
+  color: #525656;
+}

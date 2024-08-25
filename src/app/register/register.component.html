@@ -1,0 +1,52 @@
+<div class="container-register">
+<form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+  <div>
+    <label for="email">Email:</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      [(ngModel)]="model.email"
+      required
+      #email="ngModel"
+    />
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+      <div *ngIf="email.errors?.['required']">Email is required.</div>
+      <div *ngIf="email.errors?.['email']">Invalid email format.</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input
+      id="password"
+      name="password"
+      type="password"
+      [(ngModel)]="model.password"
+      required
+      #password="ngModel"
+    />
+    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+      <div *ngIf="password.errors?.['required']">Password is required.</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="role">Role:</label>
+    <input
+      id="role"
+      name="role"
+      [(ngModel)]="model.rol"
+      required
+      #role="ngModel"
+    />
+
+    <div *ngIf="role.invalid && (role.dirty || role.touched)" class="error">
+      <div *ngIf="role.errors?.['required']">Role is required.</div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="registerForm.invalid">Register</button>
+</form>
+</div>
+
