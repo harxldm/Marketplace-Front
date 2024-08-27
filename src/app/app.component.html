@@ -1,5 +1,7 @@
-<app-auth-buttons></app-auth-buttons>
+<!-- <app-auth-buttons></app-auth-buttons> -->
+<app-auth-buttons *ngIf="!isAuthPage()"></app-auth-buttons>
 <router-outlet></router-outlet>
+
 
 
 

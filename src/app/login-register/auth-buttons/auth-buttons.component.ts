@@ -17,7 +17,7 @@ export class AuthButtonsComponent {
 
 
   onLogin() {
-    // Aquí puedes añadir la lógica para redirigir a la página de login
+    console.log("Login button clicked");
     this.router.navigate(['/login']);
   }
 }

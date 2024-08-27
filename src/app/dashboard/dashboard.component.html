@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name</title>
+
+</head>
+<body>
+    <header>
+        <div class="company-name">Marketplace</div>
+        <div class="LogOut"><button (click)="logout()">Cerrar sesion</button></div>
+
+    </header>
+
+    <div class="container">
+        <aside>
+            <ul>
+                <li><a  class="panel">Administrar</a></li>
+                <li><a class="panel" (click)="Sell()">Vender</a></li>
+                <li><a class="panel">Comprar</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <div class="product-promotion">
+                <div class="image-placeholder"></div>
+                <div class="text-content">
+                    <h1>Bienvenido</h1>
+                    <p>Elije una opcion en el panel izquierdo</p>
+
+
+                </div>
+            </div>
+            <div class="login-reminder">
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

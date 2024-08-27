@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.LogOut button {
+  text-decoration: none;
+  border: solid black;
+  border-radius: 5px;
+  padding: 5px;
+
+  cursor: pointer;
+}
+.panel {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+aside {
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 15px;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-promotion {
+  display: flex;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 200px;
+  background-color: #e0e0e0;
+  margin-right: 20px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-content h1 {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.text-content a {
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.text-content button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-reminder {
+  text-align: center;
+  color: #007bff;
+  margin-top: 20px;
+}
+

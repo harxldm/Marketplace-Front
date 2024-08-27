@@ -6,6 +6,9 @@ import { AuthButtonsComponent } from './login-register/auth-buttons/auth-buttons
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SellerComponent } from './seller/seller.component';
 
 
 @NgModule({
@@ -13,6 +16,9 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     AuthButtonsComponent,
     RegisterComponent,
+    LoginComponent,
+    DashboardComponent,
+    SellerComponent,
 
 
   ],

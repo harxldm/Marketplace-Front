@@ -1,4 +1,14 @@
-form {
+ .login-container {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+  margin: 0  auto ;
+}
+
+.login-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,27 +22,11 @@ form {
   text-align: justify;
 }
 
-.container-register {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 100vh;
-  gap: 10px;
-  margin: 0  auto ;
-
-}
-
-label {
-  font-weight: bold;
-}
-
-
-
 input {
   padding: 8px;
   font-size: 16px;
   border: solid 1px #e7e7e7;
+  margin: 5px;
 }
 
 button {
@@ -42,9 +36,13 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+
+
+
 }
 
-button:hover {
-  background-color: #1f7ca2;
-  color: black;
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

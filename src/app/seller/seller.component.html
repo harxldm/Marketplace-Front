@@ -1,0 +1,43 @@
+<div class="container">
+  <main>
+      <h1>Productos</h1>
+      <table class="product-table">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Categoría</th>
+                  <th>Precio</th>
+                  <th>Stock</th>
+                  <th>Acciones</th>
+
+          </thead>
+      </table>
+      <div class="form-container" *ngIf="isFormVisible">
+          <form (ngSubmit)="createProduct()">
+              <label>
+                  Nombre:
+                  <input type="text" [(ngModel)]="product.name" name="name" required>
+              </label>
+              <label>
+                  SKU:
+                  <input type="text" [(ngModel)]="product.sku" name="sku" required>
+              </label>
+              <label>
+                  Cantidad:
+                  <input type="number" [(ngModel)]="product.quantity" name="quantity" required>
+              </label>
+              <label>
+                  Precio:
+                  <input type="number" [(ngModel)]="product.price" name="price" required>
+              </label>
+              <button type="submit">Confirmar</button>
+          </form>
+
+      </div>
+      <button (click)="toggleForm()">Crear Producto</button>
+  </main>
+</div>
+
+
+
