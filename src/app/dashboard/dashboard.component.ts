@@ -9,6 +9,9 @@ import { LoginService } from '../service/s-login/login.service';
 })
 export class DashboardComponent {
 
+
+
+
   constructor( private loginService: LoginService, private router: Router) { }
 
   logout(): void {
@@ -18,7 +21,17 @@ export class DashboardComponent {
   }
 
   Admin() {
-    this.router.navigate(['/admin']);
+    const userRole = this.loginService.getUserRole();
+
+    if (userRole === 'administrador') {
+        this.router.navigate(['/admin']);
+   } else {
+        alert('No tienes permiso para acceder a esta sección.');
+    }
+
+
+   const token = localStorage.getItem('authToken');
+   console.log('Token Almacenado:', token);
   }
 
   Sell() {
@@ -39,7 +52,7 @@ export class DashboardComponent {
   }
 
   Buy() {
-    this.router.navigate(['/Buy']);
+    this.router.navigate(['/buy']);
   }
 
 

@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SellerComponent } from './seller/seller.component';
+import { AdminComponent } from './admin/admin.component';
+import { BuyerComponent } from './buyer/buyer.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { SellerComponent } from './seller/seller.component';
     LoginComponent,
     DashboardComponent,
     SellerComponent,
+    AdminComponent,
+    BuyerComponent,
 
 
   ],

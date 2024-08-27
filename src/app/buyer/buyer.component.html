@@ -1,0 +1,30 @@
+<div class="marketplace">
+  <!-- Productos -->
+  <div class="product-list">
+    <div class="product" *ngFor="let product of products">
+      <div class="product-image"></div>
+      <div class="product-details">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.price | currency }}</p>
+        <button (click)="addToCart(product)">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carrito -->
+  <div class="cart">
+    <h3>Carrito</h3>
+    <div *ngIf="cart.length === 0">El carrito está vacío.</div>
+    <ul>
+      <li *ngFor="let item of cart">
+        {{ item.name }} - {{ item.price | currency }}
+        <button (click)="removeFromCart(item)">Eliminar</button>
+      </li>
+    </ul>
+    <div *ngIf="cart.length > 0">
+      <p>Total: {{ getTotal() | currency }}</p>
+      <button (click)="checkout()">Checkout</button>
+    </div>
+  </div>
+</div>
+

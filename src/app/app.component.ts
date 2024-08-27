@@ -14,6 +14,8 @@ export class AppComponent {
     return this.router.url === '/login' ||
     this.router.url === '/register' ||
     this.router.url === '/dashboard' ||
-    this.router.url === '/seller';
+    this.router.url === '/seller' ||
+    this.router.url === '/admin' ||
+    this.router.url === '/buy';
   }
 }
