@@ -16,6 +16,9 @@ export class RegisterComponent {
 
 
   model = {email: '', password: '', rol: ''};
+  emailExists = false;
+  emailErrorMessage = "";
+
 
   constructor(private registerService: RegisterService , private router: Router) { }
 
@@ -30,6 +33,27 @@ export class RegisterComponent {
         },
         error => {
           console.error('Error registering user:', error);
+          this.emailErrorMessage = 'User already exists.';
+
+        }
+      );
+    }
+  }
+
+  onEmailBlur() {
+    if (this.model.email) {
+      this.registerService.checkEmailExist(this.model.email).subscribe(
+        response => {
+          this.emailExists = response.exists;
+          if (this.emailExists) {
+            this.emailErrorMessage = 'Email is already registered.';
+          } else {
+            this.emailErrorMessage = '';
+          }
+        },
+        error => {
+          console.error('Error checking email existence:', error);
+          this.emailErrorMessage = 'Error checking email existence.';
         }
       );
     }

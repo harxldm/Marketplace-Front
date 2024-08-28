@@ -41,6 +41,14 @@ button {
 
 }
 
+.error-message {
+  border: solid white;
+  color: white;
+  border-radius: 5px;
+  background-color: crimson;
+  padding: 5px;
+}
+
 .login-button {
   display: flex;
   align-items: center;

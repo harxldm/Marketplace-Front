@@ -1,11 +1,20 @@
+<div class="filters">
+  <!-- Filtros -->
+  <input type="text" placeholder="Filtrar por nombre" [(ngModel)]="filterName">
+  <input type="text" placeholder="Filtrar por SKU" [(ngModel)]="filterSku">
+  <input type="number" placeholder="Precio mínimo" [(ngModel)]="filterPriceMin">
+  <input type="number" placeholder="Precio máximo" [(ngModel)]="filterPriceMax">
+</div>
+
 <div class="marketplace">
   <!-- Productos -->
   <div class="product-list">
-    <div class="product" *ngFor="let product of products">
+    <div class="product" *ngFor="let product of filteredProducts()">
       <div class="product-image"></div>
       <div class="product-details">
         <h3>{{ product.name }}</h3>
         <p>{{ product.price | currency }}</p>
+        <p>{{ product.sku }}</p>
         <button (click)="addToCart(product)">Agregar al carrito</button>
       </div>
     </div>

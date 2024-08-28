@@ -21,34 +21,36 @@ export class DashboardComponent {
   }
 
   Admin() {
-    const userRole = this.loginService.getUserRole();
+    //  const userRole = this.loginService.getUserRole();
 
-    if (userRole === 'administrador') {
-        this.router.navigate(['/admin']);
-   } else {
-        alert('No tienes permiso para acceder a esta sección.');
-    }
+    //  if (userRole === 'administrador') {
+    //      this.router.navigate(['/admin']);
+    // } else {
+    //      alert('No tienes permiso para acceder a esta sección.');
+    //  }
 
 
-   const token = localStorage.getItem('authToken');
-   console.log('Token Almacenado:', token);
+    // const token = localStorage.getItem('authToken');
+    // console.log('Token Almacenado:', token);
+
+   this.router.navigate(['/admin']);
   }
 
   Sell() {
-     const userRole = this.loginService.getUserRole();
+      const userRole = this.loginService.getUserRole();
 
-     if (userRole === 'vendedor') {
-         this.router.navigate(['/seller']);
-    } else {
-         alert('No tienes permiso para acceder a esta sección.');
-     }
+       if (userRole === 'vendedor') {
+          this.router.navigate(['/seller']);
+      } else {
+           alert('No tienes permiso para acceder a esta sección.');
+       }
 
 
-    const token = localStorage.getItem('authToken');
-    console.log('Token Almacenado:', token);
-
+      const token = localStorage.getItem('authToken');
+      console.log('Token Almacenado:', token);
 
     // this.router.navigate(['/seller']);
+
   }
 
   Buy() {

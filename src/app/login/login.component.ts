@@ -13,6 +13,8 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
 
+  errorMessage: string | null = null;
+
   constructor(private loginService: LoginService, private router: Router) { }
 
   onSubmit(form: NgForm) {
@@ -29,6 +31,8 @@ export class LoginComponent {
         },
         error => {
           console.error('Error logging in:', error);
+          this.errorMessage = 'Correo electrónico o contraseña incorrectos.';
+
         }
       );
     } else {

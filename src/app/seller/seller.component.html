@@ -1,21 +1,55 @@
 <div class="container">
-  <main>
-    <h1>Productos</h1>
-    <div>
-      <label for="name">Nombre:</label>
-      <input id="name" [(ngModel)]="productName" name="name">
+    <main>
+      <h1>Productos</h1>
+      <button (click)="toggleForm()">Crear Producto</button>
+     
+      <!-- Tabla para mostrar productos -->
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>SKU</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.productID }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.sku }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.amount }}</td>
+          </tr>
+        </tbody>
+      </table>
+     
+      <div class="form-container" *ngIf="isFormVisible">
+        <form (ngSubmit)="createProduct()">
+          <label for="name">Nombre:</label>
+          <input id="name" [(ngModel)]="productName" name="name">
+         
+          <label for="sku">SKU:</label>
+          <input id="sku" [(ngModel)]="productSKU" name="sku">
+         
+          <label for="price">Precio:</label>
+          <input id="price" type="number" [(ngModel)]="productPrice" name="price">
+         
+          <label for="amount">Cantidad:</label>
+          <input id="amount" type="number" [(ngModel)]="productAmount" name="amount">
+         
+          <button type="submit" (click)="onConfirm()">Confirmar</button>
+        </form>
+      </div>
+    </main>
+  </div>
 
-      <label for="sku">SKU:</label>
-      <input id="sku" [(ngModel)]="productSKU" name="sku">
 
-      <label for="amount">Cantidad:</label>
-      <input id="amount" type="number" [(ngModel)]="productAmount" name="amount">
 
-      <label for="price">Precio:</label>
-      <input id="price" type="number" [(ngModel)]="productPrice" name="price">
 
-      <button (click)="onConfirm()">Confirmar</button>
-    </div>
+
+
 
 
 

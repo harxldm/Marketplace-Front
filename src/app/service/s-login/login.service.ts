@@ -15,10 +15,12 @@ export class LoginService {
 
   login(email: string, password: string): Observable<any> {
     const loginData = { email, password };
-    return this.http.post<{ token: string }>(this.apiUrl, loginData)
+    return this.http.post<{ Token: string }>(this.apiUrl, loginData)
       .pipe(
         tap(response => {
-          localStorage.setItem('authToken', response.token); // Guardar el token en localStorage
+          debugger
+          localStorage.setItem('authToken', response.Token); // Guardar el token en localStorage
+
         }),
         catchError(error => {
           console.error('Login error:', error);

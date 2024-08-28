@@ -22,5 +22,16 @@ export class RegisterService {
     );
   }
 
-
+  checkEmailExist(email: string): Observable<any> {
+    return this.http.get(`${this.ApiURL}/userExist?email=${email}`).pipe(
+      tap(response => console.log('Response from email check:', response)),
+      catchError(error => {
+        console.error('Error checking email existence:', error);
+        return throwError(error);
+      })
+    );
+  }
 }
+
+
+
